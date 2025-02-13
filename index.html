@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kri Neupane Portfolio</title>
+  <title>Kritagya Neupane Portfolio</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -119,15 +119,21 @@
     
     /* Video Placeholder */
     .video-placeholder {
-      width: 100%;
-      max-width: 500px;
+      width: 300px;
+      height: 300px;
       background: #ecf0f1;
       border: 2px dashed #bdc3c7;
-      padding: 40px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 15px;
-      color: #7f8c8d;
-      font-style: italic;
+    }
+    .video-placeholder video {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #3498db;
     }
     
     /* Gallery & Fun Fact Images */
@@ -222,7 +228,8 @@
     </div>
     <div class="right-section">
       <p>
-        Hello! I am a current student at UT Dallas pursuing a Bachelor of Science in Information Technology &amp; Systems (Cybersecurity Track). I'm passionate about cybersecurity, cloud computing, and innovative tech solutions.
+        Hello! I am a current student at UT Dallas pursuing a Bachelor of Science in Information Technology &amp; Systems (Cybersecurity Track).
+        I'm passionate about cybersecurity, cloud computing, and innovative tech solutions.
       </p>
       <p>
         My experience includes an internship at Accenture, a role as a Sales Associate at L’Occitane En Provence, and leadership roles in various organizations.
@@ -240,7 +247,9 @@
         Watch my self-introduction video where I answer “Tell me about yourself.”
       </p>
       <div class="video-placeholder">
-        Video placeholder – embed your introduction video here.
+        <video src="Portfolio Video.mp4" controls>
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </section>
