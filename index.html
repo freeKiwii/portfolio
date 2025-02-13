@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kritagya Neupane Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Header Styles */
+    header {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      font-weight: 600;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 120px 5% 50px; /* extra top padding to account for fixed header */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #2980b9, #6dd5fa);
+      color: #fff;
+    }
+    .hero .left {
+      flex: 1 1 300px;
+    }
+    .hero .left h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .hero .left h2 {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+    .hero .right img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 5px solid #fff;
+    }
+    
+    /* Section Layout */
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 5%;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+    section:nth-of-type(even) {
+      background: #f1f1f1;
+    }
+    .left-section {
+      flex: 1 1 250px;
+      max-width: 250px;
+      margin-bottom: 20px;
+    }
+    .left-section h3 {
+      text-transform: uppercase;
+      font-size: 1.2em;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+    }
+    .right-section {
+      flex: 2 1 500px;
+      margin-left: 30px;
+    }
+    .right-section p, .right-section ul {
+      margin-bottom: 15px;
+    }
+    .right-section ul {
+      padding-left: 20px;
+    }
+    .right-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    /* Video Placeholder */
+    .video-placeholder {
+      width: 100%;
+      max-width: 500px;
+      background: #ecf0f1;
+      border: 2px dashed #bdc3c7;
+      padding: 40px;
+      text-align: center;
+      margin-top: 15px;
+      color: #7f8c8d;
+      font-style: italic;
+    }
+    
+    /* Gallery & Fun Fact Images */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .gallery img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #3498db;
+    }
+    
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #ecf0f1;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      section {
+        flex-direction: column;
+      }
+      .right-section {
+        margin-left: 0;
+      }
+      .hero {
+        flex-direction: column;
+      }
+      .hero .right img {
+        margin-top: 20px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    /* Scroll Image Loading Transition */
+    img.lazy {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    img.lazy.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">Introduction</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#funfacts">Fun Facts</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#linkedin">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="left">
+      <h2>Professional Portfolio</h2>
+      <h1>Kri Neupane</h1>
+    </div>
+    <div class="right">
+      <!-- Added the "lazy" class for scroll loading -->
+      <img src="HeadShot.jpg" alt="Photo of Kri Neupane" class="lazy">
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section id="about">
+    <div class="left-section">
+      <h3>Introduction</h3>
+    </div>
+    <div class="right-section">
+      <p>
+        Hello! I am a current student at UT Dallas pursuing a Bachelor of Science in Information Technology &amp; Systems (Cybersecurity Track).
+        I also have a background in Computer Science from UT Austin. I'm passionate about cybersecurity, cloud computing, and innovative tech solutions.
+      </p>
+      <p>
+        My experience includes an internship at Accenture, a role as a Sales Associate at L’Occitane En Provence, and leadership roles in various organizations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video">
+    <div class="left-section">
+      <h3>Video</h3>
+    </div>
+    <div class="right-section">
+      <p>
+        Watch my self-introduction video where I answer “Tell me about yourself.”
+      </p>
+      <div class="video-placeholder">
+        Video placeholder – embed your introduction video here.
+      </div>
+    </div>
+  </section>
+
+  <!-- Goals Section -->
+  <section id="goals">
+    <div class="left-section">
+      <h3>Goals</h3>
+    </div>
+    <div class="right-section">
+      <ul>
+        <li>Expand my expertise in cybersecurity and cloud computing.</li>
+        <li>Engage in challenging internships and hands-on projects.</li>
+        <li>Collaborate on innovative solutions with a diverse team.</li>
+        <li>Continuously learn and adapt to emerging technologies.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Fun Facts Section -->
+  <section id="funfacts">
+    <div class="left-section">
+      <h3>Fun Facts</h3>
+    </div>
+    <div class="right-section">
+      <p>
+        Outside of academics, I love photography, traveling, and playing guitar. Here are a few snapshots of my hobbies:
+      </p>
+      <div class="gallery">
+        <!-- Added the "lazy" class for scroll loading -->
+        <img src="funfact1.jpg" alt="Fun Fact 1" class="lazy">
+        <img src="funfact2.jpg" alt="Fun Fact 2" class="lazy">
+        <img src="funfact3.jpg" alt="Fun Fact 3" class="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <div class="left-section">
+      <h3>Resume</h3>
+    </div>
+    <div class="right-section">
+      <p>
+        View my resume's highlights below, or 
+        <a href="KritagyaNeupane_Resume.pdf" target="_blank">click here</a> to download it.
+      </p>
+      <!-- Three concise resume highlights -->
+      <ul>
+        <li><strong>Technology Consultant Intern at Accenture:</strong> Improved efficiency by 15% through process optimizations and gained hands-on experience with Oracle EBS.</li>
+        <li><strong>Sales Associate at L’Occitane En Provence:</strong> Delivered exceptional service to 200+ customers daily, contributing to a 15% sales increase.</li>
+        <li><strong>Ambassador at America Needs You FirstGenU:</strong> Mentored and recruited over 1,000 first-generation students, enhancing leadership skills.</li>
+      </ul>
+      <div style="border: 1px solid #ccc; margin-top: 15px;">
+        <!-- Embed your PDF resume in an iframe -->
+        <iframe 
+          src="KritagyaNeupane_Resume.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: none;">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- LinkedIn Section -->
+  <section id="linkedin">
+    <div class="left-section">
+      <h3>LinkedIn</h3>
+    </div>
+    <div class="right-section">
+      <p>
+        Connect with me on <a href="https://www.linkedin.com/in/kri-neupane/" target="_blank">LinkedIn</a> to learn more about my professional journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kritagya Neupane. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript for Scroll Image Loading Effect -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lazyImages = document.querySelectorAll('img.lazy');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      lazyImages.forEach(img => {
+        observer.observe(img);
+      });
+    });
+  </script>
+</body>
+</html>
